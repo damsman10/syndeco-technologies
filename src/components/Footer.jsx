@@ -1,5 +1,6 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FiPhoneCall, FiMail, FiGlobe, FiSmartphone } from "react-icons/fi";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start w-full md:w-[27%]">
           <h2 className="text-[28px] md:text-[32px] font-bold text-[#003366] mb-2">Syndeco</h2>
           <p className="mb-4 max-w-sm">
-            At Syndeco Technologies, we are dedicated to delivering innovative technology
+            At Syndeco Technologies Ltd, we are dedicated to delivering innovative technology
             solutions tailored to meet the unique needs of businesses like yours.
           </p>
           <div className="flex space-x-4 mt-4 text-gray-600">
@@ -23,10 +24,10 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start w-full md:w-[15%]">
           <h3 className="font-bold text-gray-900 mb-3 text-[20px]">Useful Links</h3>
           <ul className="space-y-2">
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/services">Our Services</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/careers">Careers</a></li>
+            <li><Link to="/about" >About Us</Link></li>
+            <li><Link to="/services" >Our Services</Link></li>
+            <li><Link to="/portfolio" >Projects</Link></li>
+            <li><Link to="/careers" >Work with us</Link></li>
           </ul>
         </div>
 
@@ -35,7 +36,7 @@ const Footer = () => {
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-center justify-center md:justify-start gap-2"><FiSmartphone /> <a href="tel:2348108648372">234 810 8648 372</a></li>
             <li className="flex items-center justify-center md:justify-start gap-2"><FiPhoneCall /> <a href="tel:0355688547">03 5568 8547</a></li>
-            <li className="flex items-center justify-center md:justify-start gap-2"><FiMail /> <a href="mailto:info@syndeco.ng">info@syndeco.ng</a></li>
+            <li className="flex items-center justify-center md:justify-start gap-2"><FiMail /><a href="mailto:info@syndeco.ng">info@syndeco.ng</a></li>
             <li className="flex items-center justify-center md:justify-start gap-2"><FiGlobe /> <a href="https://www.syndeco.ng" target="_blank" rel="noopener noreferrer">www.syndeco.ng</a></li>
           </ul>
         </div>
