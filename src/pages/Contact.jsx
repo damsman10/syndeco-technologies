@@ -7,7 +7,8 @@ const Contact = () => {
       <motion.section
         className="relative py-28 px-6 md:px-16 text-center"
         initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div
@@ -30,8 +31,8 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
           <h3 className="text-2xl font-semibold text-[#003366] mb-8">
             Contact Information
@@ -47,7 +48,7 @@ const Contact = () => {
             </li>
             <li className="flex items-center space-x-4">
               <FaEnvelope className="text-[#003366] text-xl" />
-              <span>info@syndeco.com</span>
+              <span>info@syndeco.ng</span>
             </li>
           </ul>
 

@@ -1,38 +1,39 @@
 import { motion } from "framer-motion";
 
 const Services = () => {
-  const services = [
+    const services = [
     {
-      title: "Web Development",
-      text: "Modern, responsive, and scalable websites tailored to your business needs.",
-      icon: "💻",
+        title: "Mobile Solutions",
+        text: "Seamless mobile experiences that connect with your audience anywhere.",
+        icon: "📱",
     },
     {
-      title: "UI/UX Design",
-      text: "Intuitive and engaging designs that put user experience first.",
-      icon: "🎨",
+        title: "Cloud Integration",
+        text: "Secure, scalable, and efficient cloud solutions for modern businesses.",
+        icon: "☁️",
     },
     {
-      title: "SEO Optimization",
-      text: "Boost your visibility and rank higher with data-driven SEO strategies.",
-      icon: "🚀",
+        title: "Web Development",
+        text: "Modern, responsive, and scalable websites tailored to your business needs.",
+        icon: "💻",
     },
     {
-      title: "Mobile Solutions",
-      text: "Seamless mobile experiences that connect with your audience anywhere.",
-      icon: "📱",
+        title: "UI/UX & Graphics Design",
+        text: "Creative visuals and intuitive experiences that strengthen your brand identity.",
+        icon: "🎨",
     },
     {
-      title: "Cloud Integration",
-      text: "Secure, scalable, and efficient cloud solutions for modern businesses.",
-      icon: "☁️",
+        title: "IT Training",
+        text: "Empowering teams with hands-on training to stay ahead in the digital era.",
+        icon: "📘",
     },
     {
-      title: "IT Consulting",
-      text: "Expert advice and strategies to navigate the digital landscape with confidence.",
-      icon: "🧩",
+        title: "SEO Optimization",
+        text: "Boost your visibility and rank higher with data-driven SEO strategies.",
+        icon: "🚀",
     },
-  ];
+    ];
+
 
   return (
     <div className="services-page font-montserrat">
@@ -62,7 +63,7 @@ const Services = () => {
           <motion.div
             key={i}
             className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: true }}

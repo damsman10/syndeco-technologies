@@ -15,7 +15,7 @@ const Portfolio = () => {
     {
       title: "Mobile App",
       text: "Seamless mobile application designed for cross-platform use.",
-      image: "/p3.jpg",
+      image: "/mob-app.jpg",
     },
     {
       title: "News Portal",
@@ -34,13 +34,21 @@ const Portfolio = () => {
     },
   ];
 
+  const clients = [
+    "/kfila.png",
+    "/alpha.jpg",
+    "/afrilogo.png",
+    "/msn.png",
+    "/snap.svg",
+    "/sail.jpg",
+  ];
+
   return (
     <div className="portfolio-page font-montserrat">
       <motion.section
         className="relative py-20 px-6 md:px-16 text-center text-white"
         initial={{ opacity: 0, y: -40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         <div
@@ -63,7 +71,7 @@ const Portfolio = () => {
           <motion.div
             key={i}
             className="bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition transform hover:-translate-y-2"
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: true }}
@@ -82,6 +90,34 @@ const Portfolio = () => {
           </motion.div>
         ))}
       </section>
+
+      <motion.section
+        className="bg-white py-16 px-6 md:px-16 text-center overflow-hidden"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold text-[#003366] mb-10 font-poppins">
+          Trusted by Businesses We’ve Empowered
+        </h2>
+        <div className="relative w-full overflow-hidden">
+          <motion.div
+            className="flex gap-16 whitespace-nowrap"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          >
+            {clients.concat(clients).map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="Client Logo"
+                className="h-16 grayscale opacity-80 hover:opacity-100 transition"
+              />
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
 
       <motion.section
         className="bg-gray-100 py-20 px-6 md:px-16 text-center"

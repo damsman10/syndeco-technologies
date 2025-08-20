@@ -68,7 +68,7 @@ const Careers = () => {
             <motion.div
               key={i}
               className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition"
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
