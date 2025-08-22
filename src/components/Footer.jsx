@@ -1,6 +1,7 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FiPhoneCall, FiMail, FiGlobe, FiSmartphone } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/sdc-logo.png"
 
 const Footer = () => {
   return (
@@ -8,7 +9,10 @@ const Footer = () => {
       <div className="px-6 md:px-0 max-w-6xl font-raleway mx-auto mt-6 py-8 flex flex-col md:flex-row md:justify-between gap-12 text-base md:text-[16px] text-gray-700 text-center md:text-left">
 
         <div className="flex flex-col items-center md:items-start w-full md:w-[27%]">
-          <h2 className="text-[28px] md:text-[32px] font-bold text-[#003366] mb-2">Syndeco</h2>
+          <Link to="/">
+            <img src={logo} alt="logo" className="pb-2" />
+          </Link>
+          {/* <h2 className="text-[28px] md:text-[32px] font-bold text-[#003366] mb-2">Syndeco</h2> */}
           <p className="mb-4 max-w-sm">
             At Syndeco Technologies Ltd, we are dedicated to delivering innovative technology
             solutions tailored to meet the unique needs of businesses like yours.
