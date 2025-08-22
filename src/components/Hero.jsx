@@ -16,14 +16,14 @@ const Hero = () => {
             Delivering holistic digital experiences through technical expertise, creative strategy, and user-centric thinking
           </p>
           <div className="flex flex-col md:flex-row flex-wrap gap-4 mt-4">
-          <Link to="/contact">
-            <button className="bg-[#003366] text-white text-center px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">
+          <Link to="/contact" className="w-full md:w-auto">
+            <button className="bg-[#003366] text-white text-center px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition w-full md:w-auto">
               Get Started Now →
             </button>
           </Link>
             <a
               href="mailto:info@syndeco.ng?subject=Inquiry%20from%20Website"
-              className="!border !border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition"
+              className="border border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition w-full md:w-auto"
             >
               Contact Us
             </a>
