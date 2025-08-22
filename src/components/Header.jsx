@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/sdc-logo.png"
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -24,9 +25,12 @@ const Header = () => {
 
       <div className="mainheader py-6 px-6 md:px-12 flex items-center justify-between shadow-sm relative z-50">
         <div className="logo flex items-center space-x-2">
-          <span className="text-2xl font-bold text-[#003366] font-poppins">
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
+          {/* <span className="text-2xl font-bold text-[#003366] font-poppins">
             SYNDECO
-          </span>
+          </span> */}
         </div>
 
         <nav className="nav hidden md:flex space-x-14 text-gray-700 font-medium font-montserrat">

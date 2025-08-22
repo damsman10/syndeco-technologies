@@ -24,6 +24,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start w-full md:w-[15%]">
           <h3 className="font-bold text-gray-900 mb-3 text-[20px]">Useful Links</h3>
           <ul className="space-y-2">
+            <li><Link to="/" >Home</Link></li>
             <li><Link to="/blog" >Blog</Link></li>
             <li><Link to="/services" >Our Services</Link></li>
             <li><Link to="/portfolio" >Projects</Link></li>
