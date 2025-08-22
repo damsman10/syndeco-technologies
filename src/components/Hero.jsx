@@ -37,7 +37,8 @@ const Hero = () => {
             src="/heroimg.jpeg"
             alt="Professional IT Team at Work"
             className="rounded-full w-96 h-96 object-cover"
-          />
+          />'
+          '
 
           <div className="absolute -bottom-12 md:bottom-4 left-8 text-center md:text-left md:left-4 bg-white shadow-lg rounded-lg p-3 flex flex-col gap-2 max-w-[250px]">
             <div className="flex justify-center md:justify-start -space-x-2">

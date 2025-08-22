@@ -1,9 +1,10 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutHome = () => {
   return (
-    <div className="w-4/5 mx-auto mt-24 grid md:grid-cols-2 gap-12 items-center pt-2 pb-4 md:py-12 font-montserrat">
+    <div className="w-4/5 mx-auto mt-12 mb-6 grid md:grid-cols-2 gap-12 items-center pt-2 pb-4 md:py-12 font-montserrat">
       
       <div className="left hidden relative md:flex gap-4 h-full">
         
@@ -21,10 +22,10 @@ const AboutHome = () => {
           />
           
         </div>
-
+        
         <div className="overlay absolute bottom-6 left-0 bg-[#003366] text-white text-center p-6 rounded-lg shadow-md">
             <h4 className="text-lg font-semibold">24/7 Support</h4>
-            <p className="text-sm mt-1 leading-6">Syndeco Technology <br /> & IT Solution</p>
+            <p className="text-sm mt-1 leading-6">Syndeco Technologies <br /> & IT Solution</p>
         </div>
       </div>
 
@@ -40,7 +41,7 @@ const AboutHome = () => {
           Discover Our Story <br /> Empowering Business Through Innovation
         </h2>
         <p className="text-gray-600 mt-4 leading-relaxed">
-          Syndeco is a pioneering force in the realm of technology and IT
+          Syndeco Technologies is a pioneering force in the realm of technology and IT
           solutions, dedicated to revolutionising the way businesses thrive in
           the digital age. Our approach is rooted in collaboration,
           transparency, and a relentless pursuit of excellence.
@@ -60,9 +61,13 @@ const AboutHome = () => {
         </ul>
 
         <div className="text-center md:text-left">
-          <button className="mt-6 bg-[#003366] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition ">
-            Discover More →
-          </button>
+          
+          <Link to="/about">
+            <button className="mt-6 bg-[#003366] text-white px-6 py-3 rounded-md hover:bg-blue-700 transition ">
+              Discover More →
+            </button>
+          </Link>
+
         </div>
       </div>
     </div>

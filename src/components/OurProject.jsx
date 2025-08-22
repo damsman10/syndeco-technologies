@@ -32,11 +32,7 @@ const OurProject = () => {
               alt={project.title}
               className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105"
             />
-
-            
-            <div className="absolute inset-0 bg-black/55 transition duration-300 z-10"></div>
-
-            
+            <div className="absolute inset-0 bg-[rgba(0,0,0,0.55)] transition duration-300 z-10"></div>
             <div className="overlay h-30 flex flex-col justify-between absolute bottom-4 left-4 right-4 bg-white bg-opacity-95 backdrop-blur-md px-5 py-4 rounded-lg shadow-md text-left z-20">
               <h3 className="text-[18px] text-center md:text-[18px] font-semibold text-gray-900">
                 {project.title}
@@ -50,6 +46,15 @@ const OurProject = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12">
+        <a
+          href="/portfolio"
+          className="inline-block px-6 py-3 bg-[#003366] text-white font-semibold rounded-lg shadow-md hover:bg-[#002244] transition"
+        >
+          View More Projects →
+        </a>
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import { Server, ShieldCheck, Cloud } from "lucide-react";
-
+import { Link
+  
+ } from "react-router-dom";
 const features = [
   {
     icon: Server,
@@ -57,12 +59,11 @@ const StrategicSolutions = () => {
         </div>
 
 
-        <a
-          href="#contact"
+        <Link to="/about"
           className="self-center md:self-baseline mt-8 bg-[#003366] text-white px-6 py-3 rounded-md text-sm font-semibold hover:bg-[#002244] transition"
         >
           Discover More →
-        </a>
+        </Link>
       </div>
 
     

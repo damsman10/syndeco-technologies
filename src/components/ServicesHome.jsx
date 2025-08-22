@@ -48,7 +48,7 @@ const services = [
 
 const ServicesHome = () => {
   return (
-    <div className="relative bg-[#f9fafb] py-20 overflow-hidden font-raleway">
+    <div className="relative bg-[#f3f4f6] py-20 overflow-hidden font-raleway">
 
       <div className="w-4/5 mx-auto">
        
