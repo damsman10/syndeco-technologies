@@ -23,10 +23,35 @@ const Hero = () => {
           </Link>
             <a
               href="mailto:info@syndeco.ng?subject=Inquiry%20from%20Website"
-              className="block border border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition w-full md:w-auto"
+              className="w-full md:w-auto"
             >
-              Contact Us
+              <button
+                className="w-full md:w-auto border border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition"
+              >
+                Contact Us
+              </button>
             </a>
+            <a
+              href="mailto:info@syndeco.ng?subject=Inquiry%20from%20Website"
+              className="w-full md:w-auto"
+            >
+              <button
+                className="w-full md:w-auto border-2 border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition"
+              >
+                Contact Us
+              </button>
+            </a>
+            <a
+              href="mailto:info@syndeco.ng?subject=Inquiry%20from%20Website"
+              className="w-full md:w-auto"
+            >
+              <button
+                className="w-full md:w-auto border-2 border-blue-500 text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition"
+              >
+                Contact Us
+              </button>
+            </a>
+
           </div>
         </div>
 
