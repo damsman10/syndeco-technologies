@@ -5,12 +5,22 @@ const Portfolio = () => {
     {
       title: "E-Commerce Platform",
       text: "A modern online store with secure payments and responsive design.",
-      image: "/p1.jpg",
+      image: "/ecom.png",
+    },
+    {
+      title: "HR Landing Page",
+      text: "Responsive landing page engineered for high-impact HR training marketing.",
+      image: "/SuportPro.png",
+    },
+    {
+      title: "News Portal",
+      text: "High-traffic news platform optimized for speed and SEO.",
+      image: "/proj3.png",
     },
     {
       title: "Corporate Website",
       text: "Professional and scalable web presence for a global enterprise.",
-      image: "/p2.jpg",
+      image: "/corp.jpg",
     },
     {
       title: "Mobile App",
@@ -18,29 +28,39 @@ const Portfolio = () => {
       image: "/mob-app.jpg",
     },
     {
-      title: "News Portal",
-      text: "High-traffic news platform optimized for speed and SEO.",
-      image: "/p4.jpg",
-    },
-    {
-      title: "Portfolio Showcase",
-      text: "Creative portfolio website highlighting skills and achievements.",
-      image: "/p5.jpg",
+      title: "Car Rental Platform",
+      text: "A digital service that lets users easily search, book, and manage car rentals in their area.",
+      image: "/proj2.png",
     },
     {
       title: "Business Dashboard",
       text: "Data-driven analytics dashboard with real-time insights.",
-      image: "/p6.jpg",
+      image: "/proj.png",
     },
+    {
+      title: "Church Website",
+      text: "Engaging and responsive church platform built to share sermons, events, and community updates.",
+      image: "/church.jpg",
+    },
+    {
+      title: "Joy Academy",
+      text: "A colorful, engaging website for a modern children’s school — built to inform parents and inspire young learners.",
+      image: "/school.jpg",
+    }
+
   ];
 
   const clients = [
     "/kfila.png",
+    "/supportpr.png",
     "/alpha.jpg",
     "/afrilogo.png",
+    "/reddot.png",
     "/msn.png",
     "/snap.svg",
+    "/dp.png",
     "/sail.jpg",
+    "/retain.jpg",
   ];
 
   return (
@@ -91,33 +111,39 @@ const Portfolio = () => {
         ))}
       </section>
 
-      <motion.section
-        className="bg-white py-16 px-6 md:px-16 text-center overflow-hidden"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
+      <section className="bg-white py-16 px-6 md:px-16 text-center overflow-hidden">
         <h2 className="text-3xl font-bold text-[#003366] mb-10 font-poppins">
           Trusted by Businesses We’ve Empowered
         </h2>
-        <div className="relative w-full overflow-hidden">
-          <motion.div
-            className="flex gap-16 whitespace-nowrap"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-          >
+
+        <div className="hidden md:block relative w-full overflow-hidden">
+          <div className="flex gap-8 animate-marquee">
             {clients.concat(clients).map((logo, i) => (
               <img
                 key={i}
                 src={logo}
                 alt="Client Logo"
-                className="h-16 grayscale opacity-80 hover:opacity-100 transition"
+                className="h-12 max-w-[200px] object-contain grayscale opacity-80 hover:opacity-100 transition"
+                loading="lazy"
               />
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+
+        <div className="grid grid-cols-2 gap-6 justify-items-center md:hidden">
+          {clients.map((logo, i) => (
+            <img
+              key={i}
+              src={logo}
+              alt="Client Logo"
+              className="h-12 max-w-[150px] object-contain grayscale opacity-80 hover:opacity-100 transition"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </section>
+
+
 
       <motion.section
         className="bg-gray-100 py-20 px-6 md:px-16 text-center"

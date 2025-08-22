@@ -4,8 +4,8 @@ const projects = [
     image: "/proj2.png",
   },
   {
-    title: "WordPress-Based Digital News Portal",
-    image: "/proj3.png",
+    title: "Next-Gen E-Commerce Ecosystem",
+    image: "/ecom.png",
   },
   {
     title: "Integrated Advertising Performance Framework",

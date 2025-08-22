@@ -7,12 +7,14 @@ import PricingPlan from "../components/PricingPlan"
 import ServicesHome from "../components/ServicesHome"
 import StrategicSolutions from "../components/StrategicSolutions"
 import Testimonials from "../components/Testimonials"
+import TrustedComps from "../components/TrustedComps"
 
 
 const Home = () => {
   return (
     <div>
         <Hero />
+        <TrustedComps />
         <AboutHome />
         <ServicesHome />
         <StrategicSolutions /> 

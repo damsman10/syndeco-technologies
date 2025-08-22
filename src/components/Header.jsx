@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -9,12 +9,12 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Careers", href: "/careers" },
-  // { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -34,10 +34,12 @@ const Header = () => {
             <Link
               key={link.href}
               to={link.href}
-              className="hover:text-[#003366] relative pb-1 transition duration-200
-                         after:content-[''] after:absolute after:left-0 after:bottom-0
-                         after:w-0 after:h-[2px] after:bg-[#003366]
-                         hover:after:w-full after:transition-all after:duration-300"
+              className={`relative pb-1 transition duration-200 font-montserrat
+                ${
+                  location.pathname === link.href
+                    ? "text-[#003366] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#003366]"
+                    : "text-gray-700 hover:text-[#003366] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#003366] hover:after:w-full after:transition-all after:duration-300"
+                }`}
             >
               {link.label}
             </Link>
@@ -77,7 +79,9 @@ const Header = () => {
                 key={link.href}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-gray-300 font-montserrat text-lg"
+                className={`font-montserrat text-lg ${
+                  location.pathname === link.href ? "text-white underline" : "hover:text-gray-300"
+                }`}
               >
                 {link.label}
               </Link>

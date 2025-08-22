@@ -10,6 +10,14 @@
   /* background-color: #242424; */
 }
 
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
 @layer utilities {
   .font-poppins {
     font-family: 'Poppins', sans-serif;
