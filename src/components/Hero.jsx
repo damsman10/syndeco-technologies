@@ -23,7 +23,7 @@ const Hero = () => {
           </Link>
             <a
               href="mailto:info@syndeco.ng?subject=Inquiry%20from%20Website"
-              className="border border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition w-full md:w-auto"
+              className="block border border-[#003366] text-[#003366] text-center px-6 py-3 rounded-md font-semibold hover:bg-[#003366] hover:text-white transition w-full md:w-auto"
             >
               Contact Us
             </a>
