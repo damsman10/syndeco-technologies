@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero bg-gray-100 relative">
+    <section className="hero #f3f4f6 relative">
       <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 lg:px-40 pt-20 pb-32">
         <div className="left max-w-xl flex flex-col gap-5 md:w-1/2">
           <p className="text-sm font-semibold text-[#003366] font-raleway pl-1">
