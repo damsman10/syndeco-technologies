@@ -1,19 +1,23 @@
 import { Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    id: "ai-automation-business",
     title: "AI & Automation: Driving the Next Business Revolution",
     author: "Mary Ann",
     date: "Mar 15, 24",
     image: "/ai.jpg",
   },
   {
+    id: "data-privacy-2024",
     title: "Data Privacy in 2024: What Companies Need to Know",
     author: "David Green",
     date: "Mar 18, 24",
     image: "/data-privacy.jpg",
   },
   {
+    id: "cloud-computing-trends",
     title: "Cloud Computing Trends: Scaling Smarter in 2024",
     author: "Sophia Lee",
     date: "Mar 22, 24",
@@ -54,15 +58,24 @@ const BlogPosts = () => {
               <h3 className="font-semibold text-gray-900 mb-4 text-[17px] leading-snug flex-grow">
                 {post.title}
               </h3>
-              <a
-                href="#"
-                className="inline-block text-sm font-semibold border border-[#003366] text-[#003366] bg-white hover:bg-[#003366] hover:text-white px-4 py-2 rounded-md mt-auto w-full sm:w-fit text-center"
+              <Link
+                to={`/blog/${post.id}`}
+                className="inline-block text-sm font-semibold border-solid border border-[#003366] text-[#003366] bg-white hover:bg-[#003366] hover:text-white px-4 py-2 rounded-md mt-auto w-full sm:w-fit text-center"
               >
                 Read More
-              </a>
+              </Link>
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-12">
+        <Link
+          to="/blog"
+          className="inline-block px-6 py-3 bg-[#003366] text-white font-semibold rounded-lg shadow-md hover:bg-[#002244] transition"
+        >
+          View More Blog Posts →
+        </Link>
       </div>
     </div>
   );

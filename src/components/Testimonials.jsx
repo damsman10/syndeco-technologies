@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="bg-gray-50 py-20 px-6 font-raleway">
+    <section className="bg-gray-50 py-12 px-6 font-raleway">
       <div className="max-w-6xl mx-auto text-center">
         <p className="text-sm font-semibold text-[#003366] uppercase tracking-wide">
           Testimonials
@@ -37,7 +37,7 @@ const Testimonials = () => {
         </h2>
       </div>
 
-      <div className="mt-12 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="mt-8 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
         {testimonials.map((t, index) => (
           <div
             key={index}

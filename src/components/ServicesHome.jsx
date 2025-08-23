@@ -6,6 +6,7 @@ import {
   AcademicCapIcon,
   WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -74,12 +75,12 @@ const ServicesHome = () => {
               <p className="text-[16px] leading-6 text-gray-600 mb-4">
                 {service.description}
               </p>
-              <a
-                href="#"
+              <Link
+                to="/services"
                 className="text-[#003366] text-sm font-medium hover:underline"
               >
                 Learn More →
-              </a>
+              </Link>
             </div>
           ))}
         </div>

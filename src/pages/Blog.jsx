@@ -1,34 +1,6 @@
 import { motion } from "framer-motion";
-
-const posts = [
-  {
-    title: "Digital Transformation: Why It Matters Now More Than Ever",
-    summary:
-      "Explore how businesses around the world are leveraging digital tools to streamline operations and enhance customer experiences.",
-    image: "/server.jpg",
-    author: "Jane Mensah",
-    date: "August 12, 2025",
-    link: "#",
-  },
-  {
-    title: "AI & Automation: The Future of Enterprise IT",
-    summary:
-      "A deep dive into how artificial intelligence is revolutionizing infrastructure management and enterprise decision-making.",
-    image: "/server.jpg",
-    author: "Luca Okoro",
-    date: "July 25, 2025",
-    link: "#",
-  },
-  {
-    title: "Scaling Securely: Cybersecurity in a Cloud-first World",
-    summary:
-      "From SMEs to multinational corporations, here’s what it takes to keep your data safe in an increasingly digital environment.",
-    image: "/server.jpg",
-    author: "Aaliyah Johnson",
-    date: "June 30, 2025",
-    link: "#",
-  },
-];
+import BlogData from "../components/BlogData"; 
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -47,52 +19,68 @@ const Blog = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {posts.map((post, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform hover:scale-[1.02] hover:shadow-xl transition"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-            >
-              <div className="relative">
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-56 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-[#003366] mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-5">{post.summary}</p>
+          {BlogData.map((post, index) => {
+            // Create a short summary by stripping tags and taking first 150 chars
+            const summaryText = post.content.props.children
+              .map(child => {
+                if (typeof child === "string") return child;
+                if (typeof child === "object" && child.props) {
+                  if (typeof child.props.children === "string") return child.props.children;
+                  if (Array.isArray(child.props.children)) 
+                    return child.props.children.join(" ");
+                }
+                return "";
+              })
+              .join(" ")
+              .slice(0, 150) + "...";
+
+            return (
+              <motion.div
+                key={post.id}
+                className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform hover:scale-[1.02] hover:shadow-xl transition"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+              >
+                <div className="relative">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                <div className="mt-auto">
-                  <p className="text-xs text-gray-400 mb-2">
-                    By {post.author} · {post.date}
-                  </p>
-                  <a
-                    href={post.link}
-                    className="inline-block text-[#f4b400] font-semibold hover:underline text-sm"
-                  >
-                    Read More →
-                  </a>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#003366] mb-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-5">{summaryText}</p>
+                  </div>
+                  <div className="mt-auto">
+                    <p className="text-xs text-gray-400 mb-2">
+                      By {post.author} · {post.date}
+                    </p>
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="inline-block text-[#f4b400] font-semibold hover:underline text-sm"
+                    >
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         <div className="mt-14">
-          <a
-            href="#"
+          <Link
+            to="/blog"
             className="px-6 py-3 bg-[#003366] text-white rounded-full font-semibold hover:bg-[#002244] transition"
           >
             Explore More Insights
-          </a>
+          </Link>
         </div>
       </div>
     </section>

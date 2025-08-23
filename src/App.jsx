@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import Project from './pages/Project';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
+import BlogDetails from './components/BlogDetails';
 
 const App = () => {
   return (
@@ -24,14 +25,14 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
 
-        <Route path="/portfolio">
-          <Route index element={<Portfolio />} />
-          <Route path=":id" element={<Project />} /> 
-          {/* /portfolio/123 shows a specific project */}
-        </Route>
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/:id" element={<Project />} />        
 
         <Route path="/careers" element={<Careers />} />
+
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+        
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const projects = [
   {
     title: "Web-Based Vehicle Reservation System",
@@ -15,7 +17,7 @@ const projects = [
 
 const OurProject = () => {
   return (
-    <div className="py-16 bg-gray-50 text-center font-raleway px-2 md:px-0">
+    <div className="pt-16 pb-8 bg-gray-50 text-center font-raleway px-2 md:px-0">
       <p className="text-sm text-[#003366] font-semibold mb-2">Our Projects</p>
       <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-10">
         Driving Success Through <br className="hidden md:block" /> Innovative IT Solutions
@@ -37,24 +39,24 @@ const OurProject = () => {
               <h3 className="text-[18px] text-center md:text-[18px] font-semibold text-gray-900">
                 {project.title}
               </h3>
-              <a
-                href="#"
+              <Link
+                to="/portfolio"
                 className="text-[#003366] text-sm mt-2 inline-block font-medium hover:underline"
               >
                 Explore →
-              </a>
+              </Link>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-12">
-        <a
-          href="/portfolio"
+      <div className="mt-8">
+        <Link
+          to="/portfolio"
           className="inline-block px-6 py-3 bg-[#003366] text-white font-semibold rounded-lg shadow-md hover:bg-[#002244] transition"
         >
           View More Projects →
-        </a>
+        </Link>
       </div>
     </div>
   );
