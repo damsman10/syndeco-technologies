@@ -25,12 +25,14 @@ const blogPosts = [
   },
 ];
 
+// Base and hover shadows using hex colors for iOS compatibility
+const baseShadow = "0 4px 6px -1px #00000040, 0 2px 4px -2px #00000030";
+const hoverShadow = "0 10px 15px -3px #00000070, 0 4px 6px -2px #00000050";
+
 const BlogPosts = () => {
   return (
     <div className="py-16 bg-white text-center font-inter">
-      <p className="text-sm text-[#0A2342] font-semibold mb-2">
-        Blog & Latest News
-      </p>
+      <p className="text-sm text-[#0A2342] font-semibold mb-2">Blog & Latest News</p>
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-10">
         Latest News & Blog
       </h2>
@@ -39,13 +41,12 @@ const BlogPosts = () => {
         {blogPosts.map((post, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl overflow-hidden shadow-md flex flex-col"
+            className="bg-white rounded-xl overflow-hidden flex flex-col transition-shadow duration-300 ease-in-out"
+            style={{ boxShadow: baseShadow }}
+            onMouseEnter={(e) => (e.currentTarget.style.boxShadow = hoverShadow)}
+            onMouseLeave={(e) => (e.currentTarget.style.boxShadow = baseShadow)}
           >
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-48 object-cover"
-            />
+            <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
             <div className="p-5 flex flex-col flex-grow text-left">
               <div className="flex flex-wrap items-center text-sm text-gray-500 mb-3 gap-x-4 gap-y-2">
                 <span className="flex items-center gap-1">
