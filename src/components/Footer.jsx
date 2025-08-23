@@ -53,7 +53,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#003366]"
+              className="w-full px-3 py-2 border border-solid rounded-md focus:outline-none focus:ring-2 focus:ring-[#003366]"
             />
             <button
               type="submit"
@@ -66,7 +66,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="border-t py-6 text-center text-[14px] md:text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-2 max-w-6xl mx-auto">
+      <div className="border-t border-solid font-raleway py-6 text-center text-[14px] md:text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-2 max-w-6xl mx-auto">
         <p>Copyright ©2024 Syndeco. All Rights Reserved</p>
         <div className="flex gap-4 mt-2 md:mt-0">
           <a href="/terms" className="hover:underline">Terms & Conditions</a>
