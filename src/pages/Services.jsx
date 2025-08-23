@@ -1,39 +1,42 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+const baseShadow = "0 4px 8px rgba(0, 0, 0, 0.15)";
+const hoverShadow = "0 10px 20px rgba(0, 0, 0, 0.25)";
 
 const Services = () => {
-    const services = [
+  const services = [
     {
-        title: "Mobile Solutions",
-        text: "Seamless mobile experiences that connect with your audience anywhere.",
-        icon: "📱",
+      title: "Mobile Solutions",
+      text: "Seamless mobile experiences that connect with your audience anywhere.",
+      icon: "📱",
     },
     {
-        title: "Cloud Integration",
-        text: "Secure, scalable, and efficient cloud solutions for modern businesses.",
-        icon: "☁️",
+      title: "Cloud Integration",
+      text: "Secure, scalable, and efficient cloud solutions for modern businesses.",
+      icon: "☁️",
     },
     {
-        title: "Web Development",
-        text: "Modern, responsive, and scalable websites tailored to your business needs.",
-        icon: "💻",
+      title: "Web Development",
+      text: "Modern, responsive, and scalable websites tailored to your business needs.",
+      icon: "💻",
     },
     {
-        title: "UI/UX & Graphics Design",
-        text: "Creative visuals and intuitive experiences that strengthen your brand identity.",
-        icon: "🎨",
+      title: "UI/UX & Graphics Design",
+      text: "Creative visuals and intuitive experiences that strengthen your brand identity.",
+      icon: "🎨",
     },
     {
-        title: "IT Training",
-        text: "Empowering teams with hands-on training to stay ahead in the digital era.",
-        icon: "📘",
+      title: "IT Training",
+      text: "Empowering teams with hands-on training to stay ahead in the digital era.",
+      icon: "📘",
     },
     {
-        title: "SEO Optimization",
-        text: "Boost your visibility and rank higher with data-driven SEO strategies.",
-        icon: "🚀",
+      title: "SEO Optimization",
+      text: "Boost your visibility and rank higher with data-driven SEO strategies.",
+      icon: "🚀",
     },
-    ];
-
+  ];
 
   return (
     <div className="services-page font-montserrat">
@@ -62,11 +65,15 @@ const Services = () => {
         {services.map((service, i) => (
           <motion.div
             key={i}
-            className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+            className="p-8 bg-white rounded-2xl transition-transform cursor-pointer"
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: true }}
+            style={{ boxShadow: baseShadow }}
+            onMouseEnter={e => (e.currentTarget.style.boxShadow = hoverShadow)}
+            onMouseLeave={e => (e.currentTarget.style.boxShadow = baseShadow)}
+            whileHover={{ scale: 1.03, y: -8 }}
           >
             <div className="text-5xl mb-6">{service.icon}</div>
             <h3 className="text-2xl font-bold text-[#003366] mb-4 font-poppins">
@@ -78,7 +85,7 @@ const Services = () => {
       </section>
 
       <motion.section
-        className="bg-gray-100 py-20 px-6 md:px-16 text-center"
+        className="bg-[#f3f4f6] py-20 px-6 md:px-16 text-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -91,12 +98,12 @@ const Services = () => {
           Whether you’re a startup or an enterprise, our team is here to craft solutions
           that drive growth and innovation for your business.
         </p>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-block bg-[#003366] text-white px-8 py-3 rounded-xl font-semibold shadow-md hover:bg-[#002244] transition"
         >
           Get in Touch
-        </a>
+        </Link>
       </motion.section>
     </div>
   );

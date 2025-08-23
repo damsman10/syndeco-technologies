@@ -47,7 +47,6 @@ const Portfolio = () => {
       text: "A colorful, engaging website for a modern children’s school — built to inform parents and inspire young learners.",
       image: "/school.jpg",
     }
-
   ];
 
   const clients = [
@@ -62,6 +61,9 @@ const Portfolio = () => {
     "/sail.jpg",
     "/retain.jpg",
   ];
+
+  const baseShadow = "0 4px 8px rgba(0, 0, 0, 0.12)";
+  const hoverShadow = "0 10px 20px rgba(0, 0, 0, 0.18)";
 
   return (
     <div className="portfolio-page font-montserrat">
@@ -90,11 +92,21 @@ const Portfolio = () => {
         {projects.map((project, i) => (
           <motion.div
             key={i}
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl overflow-hidden transition transform hover:-translate-y-2"
+            className="bg-white rounded-2xl overflow-hidden transition-transform transform hover:-translate-y-2 cursor-pointer"
             initial={false}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: i * 0.2 }}
+            transition={{ duration: 0.7, delay: i * 0.15 }}
             viewport={{ once: true }}
+            style={{
+              boxShadow: baseShadow,
+              transition: "box-shadow 0.3s ease, transform 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = hoverShadow;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = baseShadow;
+            }}
           >
             <img
               src={project.image}
@@ -142,8 +154,6 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
-
-
 
       <motion.section
         className="bg-gray-100 py-20 px-6 md:px-16 text-center"

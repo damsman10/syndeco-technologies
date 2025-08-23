@@ -5,7 +5,7 @@ import logo from "../assets/sdc-logo.png"
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t">
+    <footer className="bg-white border-t border-solid">
       <div className="px-6 md:px-0 max-w-6xl font-raleway mx-auto mt-4 py-8 flex flex-col md:flex-row md:justify-between gap-12 text-base md:text-[16px] text-gray-700 text-center md:text-left">
 
         <div className="flex flex-col items-center md:items-start w-full md:w-[27%]">
