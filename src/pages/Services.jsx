@@ -86,7 +86,7 @@ const Services = () => {
 
       <motion.section
         className="bg-[#f3f4f6] py-20 px-6 md:px-16 text-center"
-        initial={{ opacity: 0 }}
+        initial={false}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}

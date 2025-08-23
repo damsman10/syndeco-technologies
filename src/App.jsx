@@ -13,11 +13,13 @@ import NotFound from './pages/NotFound';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
 import BlogDetails from './components/BlogDetails';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const App = () => {
   return (
     <div>
       <ScrollToTop />
+      <ScrollToTopButton />
       <Header />
 
       <Routes>

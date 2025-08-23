@@ -36,6 +36,10 @@ const Careers = () => {
     },
   ];
 
+  // ✅ Custom shadow styles (more consistent than Tailwind defaults)
+  const baseShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
+  const hoverShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
+
   return (
     <div className="careers-page font-montserrat">
       <motion.section
@@ -47,8 +51,8 @@ const Careers = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('/career.jpg')" }}
-        ></div>
-        <div className="absolute inset-0 bg-[#003366]/80"></div>
+        />
+        <div className="absolute inset-0 bg-[#003366]/80" />
         <div className="relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold font-poppins mb-4">
             Join Our Global Team
@@ -67,11 +71,20 @@ const Careers = () => {
           {benefits.map((benefit, i) => (
             <motion.div
               key={i}
-              className="p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition"
+              className="p-6 bg-white rounded-2xl transition-transform transform hover:-translate-y-1"
               initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
               viewport={{ once: true }}
+              style={{
+                boxShadow: baseShadow,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = hoverShadow;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = baseShadow;
+              }}
             >
               <h3 className="text-lg font-semibold text-[#003366]">{benefit}</h3>
             </motion.div>
@@ -87,11 +100,20 @@ const Careers = () => {
           {openings.map((job, i) => (
             <motion.div
               key={i}
-              className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition"
+              className="p-8 bg-white rounded-2xl transition-transform transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.3 }}
               viewport={{ once: true }}
+              style={{
+                boxShadow: baseShadow,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = hoverShadow;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = baseShadow;
+              }}
             >
               <h3 className="text-2xl font-bold text-[#003366] mb-2 font-poppins">
                 {job.title}
