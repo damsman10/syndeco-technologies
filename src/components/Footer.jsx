@@ -6,11 +6,11 @@ import logo from "../assets/sdc-logo.png"
 const Footer = () => {
   return (
     <footer className="bg-white border-t">
-      <div className="px-6 md:px-0 max-w-6xl font-raleway mx-auto mt-6 py-8 flex flex-col md:flex-row md:justify-between gap-12 text-base md:text-[16px] text-gray-700 text-center md:text-left">
+      <div className="px-6 md:px-0 max-w-6xl font-raleway mx-auto mt-4 py-8 flex flex-col md:flex-row md:justify-between gap-12 text-base md:text-[16px] text-gray-700 text-center md:text-left">
 
         <div className="flex flex-col items-center md:items-start w-full md:w-[27%]">
           <Link to="/">
-            <img src={logo} alt="logo" className="pb-2" />
+            <img src={logo} alt="logo" className="pb-4" />
           </Link>
           {/* <h2 className="text-[28px] md:text-[32px] font-bold text-[#003366] mb-2">Syndeco</h2> */}
           <p className="mb-4 max-w-sm">
@@ -18,10 +18,10 @@ const Footer = () => {
             solutions tailored to meet the unique needs of businesses like yours.
           </p>
           <div className="flex space-x-4 mt-4 text-gray-600">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/company/syndeco-technologies/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="border-t py-4 text-center text-base md:text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-2 max-w-6xl mx-auto">
+      <div className="border-t py-6 text-center text-[14px] md:text-sm text-gray-600 flex flex-col md:flex-row justify-between items-center px-2 max-w-6xl mx-auto">
         <p>Copyright ©2024 Syndeco. All Rights Reserved</p>
         <div className="flex gap-4 mt-2 md:mt-0">
           <a href="/terms" className="hover:underline">Terms & Conditions</a>

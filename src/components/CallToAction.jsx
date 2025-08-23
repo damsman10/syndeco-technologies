@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CallToAction = () => {
   return (
     <div className="bg-[#003366] py-16 px-6">
@@ -15,12 +17,17 @@ const CallToAction = () => {
         </div>
 
         <div className="w-full md:w-auto flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
-          <button className="bg-white text-[#003366] font-medium px-5 py-3 rounded-md hover:bg-gray-100 transition w-full sm:w-auto">
-            Request a Consultation →
-          </button>
-          <button className="border border-white text-white font-medium px-5 py-3 rounded-md hover:bg-white hover:text-[#003366] transition w-full sm:w-auto">
-            Explore Solution →
-          </button>
+          <Link to="/contact">
+            <button className="bg-white text-[#003366] font-medium px-5 py-3 rounded-md hover:bg-gray-100 transition w-full sm:w-auto">
+              Request a Consultation →
+            </button>
+          </Link>
+          
+          <Link to="/contact">
+            <button className="border border-solid border-white text-white font-medium px-5 py-3 rounded-md hover:bg-white hover:text-[#003366] transition w-full sm:w-auto">
+              Explore Solution →
+            </button>
+          </Link>
         </div>
       </div>
     </div>

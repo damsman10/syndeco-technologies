@@ -9,7 +9,7 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import Project from './pages/Project';
+// import Project from './pages/Project';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
 import BlogDetails from './components/BlogDetails';
@@ -26,13 +26,13 @@ const App = () => {
         <Route path="/services" element={<Services />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:id" element={<Project />} />        
+        {/* <Route path="/portfolio/:id" element={<Project />} />         */}
 
         <Route path="/careers" element={<Careers />} />
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} />
-        
+
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
