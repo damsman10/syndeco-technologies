@@ -20,7 +20,7 @@ const Contact = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Get In Touch
           </h2>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <p className="text-white text-lg leading-relaxed">
             Have a project in mind or want to learn more about our services?  
             Let’s connect—we’d love to hear from you.
           </p>

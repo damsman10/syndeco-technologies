@@ -62,7 +62,7 @@ const About = () => {
         </motion.div>
       </section>
 
-      <section className="bg-gray-100 py-20 px-6 md:px-16">
+      <section className="bg-[#f3f4f6] py-20 px-6 md:px-16">
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           <motion.div
             className="bg-white p-8 rounded-2xl shadow-md"
