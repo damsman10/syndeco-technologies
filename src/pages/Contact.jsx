@@ -78,7 +78,7 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
               />
             </div>
             <div>
@@ -88,7 +88,7 @@ const Contact = () => {
               <input
                 type="email"
                 placeholder="you@example.com"
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
               />
             </div>
             <div>
@@ -98,7 +98,7 @@ const Contact = () => {
               <textarea
                 rows="5"
                 placeholder="Your Message..."
-                className="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
               ></textarea>
             </div>
             <button

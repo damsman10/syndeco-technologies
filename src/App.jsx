@@ -14,6 +14,7 @@ import Careers from './pages/Careers';
 import Blog from './pages/Blog';
 import BlogDetails from './components/BlogDetails';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import JobPosts from './components/JobPosts';
 
 const App = () => {
   return (
@@ -28,9 +29,10 @@ const App = () => {
         <Route path="/services" element={<Services />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
-        {/* <Route path="/portfolio/:id" element={<Project />} />         */}
 
         <Route path="/careers" element={<Careers />} />
+        <Route path="/careers/:id" element={<JobPosts />} />
+    
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetails />} />

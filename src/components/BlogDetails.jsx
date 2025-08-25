@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import BlogData from './BlogData';
 import { Calendar, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const BlogDetails = () => {
@@ -13,6 +14,7 @@ const BlogDetails = () => {
         <div>
           <h2 className="text-2xl font-bold mb-2 text-[#003366]">Post Not Found</h2>
           <p className="text-gray-600">We couldn’t find the blog post you’re looking for.</p>
+          <Link to="/blog" className="text-blue-600">← Back to Blog</Link>
         </div>
       </div>
     );

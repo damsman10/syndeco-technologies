@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import JobsData from "../components/JobsData";
+
+
+// console.log("JOBS LOADED:", JobsData);
+
 
 const Careers = () => {
   const benefits = [
@@ -9,34 +15,7 @@ const Careers = () => {
     "Cutting-edge technology and tools",
   ];
 
-  const openings = [
-    {
-      title: "Front-End Developer Intern",
-      location: "Remote / Lagos, Nigeria",
-      type: "Internship",
-      description:
-        "We are seeking a Front-End Developer Intern to help build engaging user interfaces. You’ll gain hands-on experience with React, modern web practices, and work on projects impacting thousands of users worldwide.",
-      link: "/apply/frontend-developer-intern",
-    },
-    {
-      title: "Back-End Developer Intern",
-      location: "Remote / Oyo, Nigeria",
-      type: "Internship",
-      description:
-        "Join as a Back-End Developer Intern and learn to build scalable APIs, manage databases, and contribute to high-performance server-side systems used globally.",
-      link: "/apply/backend-developer-intern",
-    },
-    {
-      title: "Product Designer Intern",
-      location: "Remote / Lagos, Nigeria",
-      type: "Internship",
-      description:
-        "As a Product Designer Intern, you’ll collaborate with developers and product teams to design intuitive, user-friendly experiences and learn industry-leading design tools.",
-      link: "/apply/product-designer-intern",
-    },
-  ];
 
-  // ✅ Custom shadow styles (more consistent than Tailwind defaults)
   const baseShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
   const hoverShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
 
@@ -92,14 +71,16 @@ const Careers = () => {
         </div>
       </section>
 
+      
+
       <section className="py-20 px-6 md:px-16 bg-gray-50">
         <h2 className="text-3xl font-bold text-[#003366] mb-10 text-center font-poppins">
           Current Openings
         </h2>
         <div className="max-w-4xl mx-auto space-y-10">
-          {openings.map((job, i) => (
+          {JobsData.map((job, i) => (
             <motion.div
-              key={i}
+              key={job.id}
               className="p-8 bg-white rounded-2xl transition-transform transform hover:-translate-y-1"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -121,13 +102,14 @@ const Careers = () => {
               <p className="text-gray-600 mb-4">
                 {job.location} • {job.type}
               </p>
-              <p className="text-gray-700 mb-6">{job.description}</p>
-              <a
-                href={job.link}
+              <p className="text-gray-700 mb-6">{job.description_sh}</p>
+
+              <Link
+                to={`/careers/${job.id}`}
                 className="inline-block bg-[#003366] text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-[#002244] transition"
               >
                 Apply Now
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

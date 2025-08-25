@@ -3,8 +3,11 @@ import BlogData from "../components/BlogData";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
+  const baseShadow = "0 4px 12px rgba(0, 0, 0, 0.08)";
+  const hoverShadow = "0 8px 20px rgba(0, 0, 0, 0.15)";
+
   return (
-    <section className="py-20 px-6 md:px-12 bg-gray-50 font-montserrat">
+    <section className="py-20 px-6 md:px-12 bg-[#f3f4f6] font-montserrat">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           className="text-4xl md:text-5xl font-extrabold text-[#003366] mb-4"
@@ -12,7 +15,7 @@ const Blog = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Syndeco <span className="text-[#f4b400]">Insights</span>
+          Our <span className="text-[#f4b400]">Insights</span>
         </motion.h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-16">
           Thought leadership, industry trends, and digital innovation from our global team of experts. Stay ahead with perspectives tailored for the African market and beyond.
@@ -20,14 +23,14 @@ const Blog = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {BlogData.map((post, index) => {
-            // Create a short summary by stripping tags and taking first 150 chars
+            // Strip tags to create summary
             const summaryText = post.content.props.children
               .map(child => {
                 if (typeof child === "string") return child;
-                if (typeof child === "object" && child.props) {
-                  if (typeof child.props.children === "string") return child.props.children;
-                  if (Array.isArray(child.props.children)) 
-                    return child.props.children.join(" ");
+                if (typeof child === "object" && child?.props) {
+                  const children = child.props.children;
+                  if (typeof children === "string") return children;
+                  if (Array.isArray(children)) return children.join(" ");
                 }
                 return "";
               })
@@ -37,10 +40,22 @@ const Blog = () => {
             return (
               <motion.div
                 key={post.id}
-                className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col transform hover:scale-[1.02] hover:shadow-xl transition"
+                className="bg-white rounded-xl overflow-hidden flex flex-col transform transition duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
+                style={{
+                  boxShadow: baseShadow,
+                }}
+                whileHover={{
+                  scale: 1.02,
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.boxShadow = hoverShadow)
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.boxShadow = baseShadow)
+                }
               >
                 <div className="relative">
                   <img
@@ -77,7 +92,7 @@ const Blog = () => {
         <div className="mt-14">
           <Link
             to="/blog"
-            className="px-6 py-3 bg-[#003366] text-white rounded-full font-semibold hover:bg-[#002244] transition"
+            className="px-6 py-3 bg-[#003366] text-white rounded-full font-semibold hover:bg-[#002244] transition shadow-md"
           >
             Explore More Insights
           </Link>
