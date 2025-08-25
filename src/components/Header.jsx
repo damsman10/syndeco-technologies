@@ -23,7 +23,7 @@ const Header = () => {
         Innovating Digital Solutions for a Smarter Tomorrow...
       </div>
 
-      <div className="mainheader py-6 px-6 md:px-12 flex items-center justify-between shadow-sm relative z-50">
+      <div className="mainheader py-6 px-6 md:px-12 flex items-center justify-between shadow-sm sticky top-0 md:relative z-50 bg-white">
         <div className="logo flex items-center space-x-2">
           <Link to="/">
             <img src={logo} alt="logo" />
