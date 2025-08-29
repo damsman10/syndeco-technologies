@@ -15,7 +15,7 @@ import Blog from './pages/Blog';
 import BlogDetails from './components/BlogDetails';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import JobPosts from './components/JobPosts';
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
   return (
