@@ -70,7 +70,12 @@ const Contact = () => {
           <h3 className="text-2xl font-semibold text-[#003366] mb-8">
             Send Us a Message
           </h3>
-          <form className="space-y-6">
+
+
+          <form 
+          action="https://formspree.io/f/myzdpjwk"
+          method="POST"
+          className="space-y-6">
             <div>
               <label className="block text-gray-700 mb-2 font-medium">
                 Full Name
