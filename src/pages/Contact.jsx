@@ -82,7 +82,7 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                name="text"
+                name="name"
                 placeholder="Your Name"
                 className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
               />
