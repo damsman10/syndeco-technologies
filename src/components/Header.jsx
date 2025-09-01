@@ -2,7 +2,8 @@ import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/sdc-logo.png"
+// import logo from "../assets/sdc-logo.png"
+import logo from "../assets/SDC-Logo.svg"
 
 const navLinks = [
   { label: "Home", href: "/" },

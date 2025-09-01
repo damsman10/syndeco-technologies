@@ -1,7 +1,8 @@
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FiPhoneCall, FiMail, FiGlobe, FiSmartphone } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/sdc-logo.png"
+// import logo from "../assets/sdc-logo.png"
+import logo from "../assets/SDC-Logo.svg"
 
 const Footer = () => {
   return (
