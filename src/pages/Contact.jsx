@@ -1,7 +1,10 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <section className="font-montserrat">
       <motion.section
@@ -71,48 +74,69 @@ const Contact = () => {
             Send Us a Message
           </h3>
 
-
-          <form 
-          action="https://formspree.io/f/myzdpjwk"
-          method="POST"
-          className="space-y-6">
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Full Name
-              </label>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Email Address
-              </label>
-              <input
-                type="email"
-                placeholder="you@example.com"
-                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2 font-medium">
-                Message
-              </label>
-              <textarea
-                rows="5"
-                placeholder="Your Message..."
-                className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="bg-[#003366] text-white font-bold px-8 py-3 rounded-md hover:bg-blue-700 transition shadow-md"
+          {!submitted ? (
+            <form
+              action="https://formspree.io/f/myzdpjwk"
+              method="POST"
+              onSubmit={() => setSubmitted(true)}
+              className="space-y-6"
             >
-              Send Message
-            </button>
-          </form>
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  Message
+                </label>
+                <textarea
+                  rows="5"
+                  name="message"
+                  placeholder="Your Message..."
+                  required
+                  className="w-full border border-solid rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#003366] shadow-sm"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="bg-[#003366] text-white font-bold px-8 py-3 rounded-md hover:bg-blue-700 transition shadow-md"
+              >
+                Send Message
+              </button>
+            </form>
+          ) : (
+            <div className="text-center space-y-6">
+              <p className="text-lg font-medium text-green-600">
+                ✅ Thank you! Your message has been sent successfully.
+              </p>
+              <a
+                href="/"
+                className="inline-block bg-[#003366] text-white font-bold px-8 py-3 rounded-md hover:bg-blue-700 transition shadow-md"
+              >
+                Go Back Home
+              </a>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
