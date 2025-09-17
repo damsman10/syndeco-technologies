@@ -15,17 +15,12 @@ import Blog from './pages/Blog';
 import BlogDetails from './components/BlogDetails';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import JobPosts from './components/JobPosts';
-<<<<<<< HEAD
-import { Analytics } from '@vercel/analytics/react';
-
-=======
 import Bootcamp from './pages/services/Bootcamp';
 import WebKit from './pages/services/WebKit';
 
 import { Analytics } from '@vercel/analytics/react';
 
 
->>>>>>> 50985fc (new backup)
 const App = () => {
   return (
     <div>
@@ -36,14 +31,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-<<<<<<< HEAD
-        <Route path="/services" element={<Services />} />
-=======
         
         <Route path="/services" element={<Services />} />
         <Route path="/services/webkit" element={<WebKit />} />
         <Route path="/services/bootcamp" element={<Bootcamp />} />
->>>>>>> 50985fc (new backup)
 
         <Route path="/portfolio" element={<Portfolio />} />
 

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 /* eslint-disable no-unused-vars */
->>>>>>> 50985fc (new backup)
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -75,17 +74,12 @@ const Services = () => {
             transition={{ duration: 0.7, delay: i * 0.2 }}
             viewport={{ once: true }}
             style={{ boxShadow: baseShadow }}
-<<<<<<< HEAD
-            onMouseEnter={e => (e.currentTarget.style.boxShadow = hoverShadow)}
-            onMouseLeave={e => (e.currentTarget.style.boxShadow = baseShadow)}
-=======
             onMouseEnter={(e) =>
               (e.currentTarget.style.boxShadow = hoverShadow)
             }
             onMouseLeave={(e) =>
               (e.currentTarget.style.boxShadow = baseShadow)
             }
->>>>>>> 50985fc (new backup)
             whileHover={{ scale: 1.03, y: -8 }}
           >
             <div className="text-5xl mb-6">{service.icon}</div>
@@ -97,8 +91,6 @@ const Services = () => {
         ))}
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Featured Offerings Section */}
       <motion.section
         className="bg-white py-20 px-6 md:px-16 text-center"
@@ -157,7 +149,6 @@ const Services = () => {
         </div>
       </motion.section>
 
->>>>>>> 50985fc (new backup)
       <motion.section
         className="bg-[#f3f4f6] py-20 px-6 md:px-16 text-center"
         initial={false}
