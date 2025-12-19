@@ -1,5 +1,5 @@
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -48,7 +48,7 @@ const Contact = () => {
             </li>
             <li className="flex items-center space-x-4">
               <FaEnvelope className="text-[#003366] text-xl" />
-              <span>info@syndeco.ng</span>
+              <span>damilolaoni07@gmail.com</span>
             </li>
           </ul>
 
