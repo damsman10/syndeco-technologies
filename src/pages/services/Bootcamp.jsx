@@ -61,7 +61,7 @@ const Bootcamp = () => {
 
         {/* What You'll Learn */}
         <section className="mb-16">
-          <h2 className="text-3xl font-semibold text-[#003366] mb-6">What You’ll Learn</h2>
+          <h2 className="text-3xl font-semibold text-[#003366] mb-6 text-center">What You’ll Learn</h2>
           <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
             <li>✔ HTML5 & semantic structure</li>
             <li>✔ CSS3, Flexbox & Grid</li>

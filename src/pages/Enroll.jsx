@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Enroll = () => {
   return (
@@ -24,7 +24,7 @@ const Enroll = () => {
               Frontend Fundamentals
             </h3>
             <p className="text-gray-600 mb-3">
-              HTML, CSS, JavaScript
+              HTML, CSS, JavaScript, Git
             </p>
             <p className="text-2xl font-bold">₦80,000</p>
           </div>
@@ -53,7 +53,7 @@ const Enroll = () => {
             src="https://docs.google.com/forms/d/e/1FAIpQLSdtFLRDoP3s46gDcyE_K6yM2ajE6g4Ge5cN2nEUbbtglK2dzA/viewform?embedded=true"
             width="100%"
             height="800"
-            className="rounded-xl"
+            className="rounded-xl -p-8"
             title="Enrollment Form"
           >
             Loading…
