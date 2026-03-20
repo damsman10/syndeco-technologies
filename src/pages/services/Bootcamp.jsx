@@ -44,7 +44,7 @@ const Bootcamp = () => {
 
         {/* Hero */}
         <header className="mb-16 text-center">
-          <h1 className="text-5xl font-poppins font-extrabold text-[#003366] mb-4">
+          <h1 className="sm:text-5xl text-2xl font-poppins font-extrabold text-[#003366] mb-4">
             Frontend Development Bootcamp
           </h1>
           <p className="text-gray-700 text-xl max-w-3xl mx-auto mb-6">
