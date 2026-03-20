@@ -48,7 +48,7 @@ const Bootcamp = () => {
             Frontend Development Bootcamp
           </h1>
           <p className="text-gray-700 text-xl max-w-3xl mx-auto mb-6">
-            Learn how to build modern, responsive websites from scratch — and become job-ready with real-world projects.
+            Learn how to build modern, responsive websites from scratch and become job-ready with real-world projects.
           </p>
 
           <Link
@@ -96,6 +96,7 @@ const Bootcamp = () => {
                 <li>✔ HTML</li>
                 <li>✔ CSS</li>
                 <li>✔ JavaScript</li>
+                <li>✔ Version control with Git</li>
                 <li>✔ Starter projects</li>
               </ul>
 
