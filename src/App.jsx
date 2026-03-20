@@ -9,6 +9,8 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Enroll from './pages/Enroll';
+
 // import Project from './pages/Project';
 import Careers from './pages/Careers';
 import Blog from './pages/Blog';
@@ -35,6 +37,7 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/services/webkit" element={<WebKit />} />
         <Route path="/services/bootcamp" element={<Bootcamp />} />
+        <Route path="/enroll" element={<Enroll />} />
 
         <Route path="/portfolio" element={<Portfolio />} />
 
